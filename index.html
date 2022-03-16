@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+  <title>Whisky Base Scrapper</title>
+  	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+ 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/ico" href="img/whisky.ico"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="main.css">
+ </head>
+ <body>
+
+	<header>
+
+		<nav class="navbar navbar-light bg-dark">
+			<span class="navbar-brand mb-0 h1 p-4 text-light">Whisky Base Scrapper</span>
+		</nav>
+		
+	</header>
+	
+	<main>
+	
+		<div class="container p-0 m-0">
+		
+			<section style="background-color: #212121;">
+			
+				<div style="margin-top: 20px; margin-bottom: 20px;" class="pl-4 row col-12">
+				
+					<div class="col-6" style="text-align: center;">
+						  
+						<div class="searchLink">
+							
+							<i class="fa fa-search" style="font-size:25px; margin: 10px;"></i>
+							
+							<input id="linkPlaceholder" type="text" class="form-control form-control-sm" placeholder="Podaj link URL" aria-label="Link" aria-describedby="basic-addon2">
+							
+							<div class="input-group-append" style="width: 100px; margin-right: 5px;">
+								<button class="btn btn-sm btn-outline-white my-0" style="background-color: #212121; color: #fff; padding: 10px; border-radius: 25px; width: 100px;" type="button">Szukaj</button>
+						    </div>
+
+						</div>
+						  
+					</div>
+				</div>
+			</section>
+			
+			<section style="background-color: #f1f1f1;">
+			
+				<div class="col-12 ml-5">
+					
+					<form>
+						<div class="my-5">
+				
+							<div class="row col-8" style="text-align: center;">
+								  
+								<div class="searchProduct">
+
+									<input id="productPlaceholder" type="text" class="form-control form-control-sm eventPlaceholder" placeholder="Szukaj produktu" aria-label="product" aria-describedby="basic-addon2">
+
+								</div>
+								  
+							</div>
+								
+						</div>
+						
+						<div style="margin-bottom: 20px;" class="row">
+						
+							<div class="col-auto" style="display: flex;">
+								<label for="rate" style="margin-top: auto; margin-bottom: auto; width: 50%;">Cena od</label>
+								<input type="number" id="rate" name="rate">
+								
+								<label for="rate2" style="margin-top: auto; margin-bottom: auto;">do</label>
+								<input type="number" id="rate2" name="rate2">
+								
+							</div>
+							
+							<div class="col-auto" style="margin-top: 20px;">
+								
+								<label for="sort">Sortuj według:</label>
+
+								<select name="sort" id="sort" style="border:0; outline:0; background-color:#fff;">
+									<option value="alfabet">Alfabetycznie A-Z</option>
+									<option value="cenaros">Cena rosnąco</option>
+									<option value="cenamal">Cena malejąco</option>
+									<option value="popularność">Popularność</option>
+								</select>
+							</div>
+							
+							<div class="col-auto" style="margin-top:10px;">
+								<label class="buttonCheckbox">
+									<input type="checkbox" name="flag">
+									<span type="button" class="btn pt-2 pb-2">Pokaż dostępne</span>
+								</label>
+							</div>
+							
+							<div class="col-auto mt-auto mb-auto">
+								<button type="button" class="btn pt-2 pb-2 button">Filtruj</button>
+							</div>
+							
+						</div>
+							
+					</form>
+					
+						
+				</div>
+				
+				<div class="row ml-5">
+				
+					<article class="col-8 mt-4 mb-4 row">
+					
+						<div class="col-2">
+							<img class="w-100" src="img/example.png"></img>
+						</div>
+						
+						<div class="col-7 m-auto">
+							<a style="color: #000;" href="#"><h5 style="font-weight: 600;">LOREM IPSUM DOLOR SIT AMET</h5></a>
+				
+							
+							<p style="font-size:13; font-weight: 400;">In cursus nisi a hendrerit aliquam. Duis ipsum enim, pretium at felis quis, elementum tristique augue. Aenean porta dignissim egestas. Suspendisse ut lacinia nunc, quis porta nulla. Mauris sed mi ornare odio dignissim egestas. Vivamus euismod ex eu nisi feugiat lacinia. Morbi vitae ex ut arcu sagittis gravida at facilisis erat. </p>
+						</div>
+						
+						<div class="col-3 m-auto">
+							<h5 style="font-weight: 700;">€84,34</h5>
+							<p style="font-size:13; font-weight: 400; color: #12D251">Dostępny</p>
+						</div>
+						
+						<div class=" divider mt-4"></div>
+						
+					</article>
+				
+				</div>
+				
+				<div class="row ml-5">
+				
+					<article class="col-8 mt-4 mb-4 row">
+					
+						<div class="col-2">
+							<img class="w-100" src="img/example.png"></img>
+						</div>
+						
+						<div class="col-7 m-auto">
+							<a style="color: #000;" href="#"><h5 style="font-weight: 600;">LOREM IPSUM DOLOR SIT AMET</h5></a>
+				
+							
+							<p style="font-size:13; font-weight: 400;">In cursus nisi a hendrerit aliquam. Duis ipsum enim, pretium at felis quis, elementum tristique augue. Aenean porta dignissim egestas. Suspendisse ut lacinia nunc, quis porta nulla. Mauris sed mi ornare odio dignissim egestas. Vivamus euismod ex eu nisi feugiat lacinia. Morbi vitae ex ut arcu sagittis gravida at facilisis erat. </p>
+						</div>
+						
+						<div class="col-3 m-auto">
+							<h5 style="font-weight: 700;">€84,34</h5>
+							<p style="font-size:13; font-weight: 400; color: #E13521">Niedostępny</p>
+						</div>
+						
+						<div class=" divider mt-4"></div>
+						
+					</article>
+				
+				</div>
+				
+			</section>
+			
+			
+		</div>
+	</main>
+	
+	<footer class="font-small page-footer">
+	
+	  <div class="container-fluid text-center text-md-left">
+	  
+		<!-- Grid row -->
+		<div class="row align-items-center justify-content-around pt-3 ">
+
+		  <!-- Grid column -->
+		  <div class="col-md-auto mt-5">
+		  
+			<h4 class="font-weight-bold text-uppercase mt-3 mb-4">Nasz projekt WHISKY BASE SCRAPPER</h4>
+			
+			<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Grupa projektowa - Not Found</h5>
+
+		  </div>
+		  <!-- Grid column -->
+
+
+		  <!-- Grid column -->
+		  <div class="col-md-2 pb-3 whisky">
+
+			<img src="img/whisky.png" style="width: 120%; margin-left:-25px;">
+
+		  </div>
+		  <!-- Grid column -->
+
+		</div>
+		<!-- Grid row -->
+
+	  </div>
+	  
+	  <!-- Copyright -->
+	  <div style="font-size: 9px; color: grey;" class="footer-copyright text-center py-3">© 2022 Copyright 
+			<a style="color: grey;" href="index.html"> Grupa projektowa - Not Found.</a> All rights reserved.
+      </div>
+  <!-- Copyright -->
+
+	</footer>
+
+<script src="https://kit.fontawesome.com/e6c92d3f6a.js" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </body>
+</html>
