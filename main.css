@@ -48,6 +48,19 @@ section{
   }
 }
 
+#productPlaceholder::placeholder, #productPlaceholder::placeholder
+{
+	color: #a3a3a3;
+}
+#productPlaceholder
+{
+	min-width: 100px; 
+	max-width:auto; 
+	border: none; 
+	background: none; 
+	margin-top: 7px;
+}
+
 .container
 {
 	height: auto;
@@ -62,26 +75,10 @@ section{
   transition: max-height 0.2s ease-out;
 }
 
-#linkPlaceholder::placeholder, #productPlaceholder::placeholder{
-	color: #a3a3a3;
-}
-#linkPlaceholder{
-	min-width: 100px; 
-	max-width:auto; 
-	border: none; 
-	background: none; 
-	margin-top: 7px;
-}
-
-#productPlaceholder{
-	min-width: 100px; 
-	max-width:auto; 
-	border: none; 
-	background: none;
-}
-
-.searchLink, .searchProduct{
+.searchProduct
+{
 	border-radius: 60px; 
+	border: 1px solid rgba(0,0,0,0.5);
 	background-color: #fff;
 	width:100%; 
 	display:flex; 
@@ -96,18 +93,41 @@ section{
 	width: 100%;
 }
 
-input{
+input
+{
 	padding: 10px 10px 10px 10px;
 	border-radius: 25px;
 	border: 1px solid rgba(0,0,0,0.5);
 	outline: none;
-	width: 100%;
 	font-size: 13px;
 	margin: 10px;
 }
 
-input[type="checkbox"]{
-	width: 13px;
+input[type="checkbox"]
+{
+	width: 30px;
+    height: 30px;
+	padding: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+	transform: translate(0px,10px)
+}
+
+input[type="number"]
+{
+	width: 100px;
+	margin: 0px 10px 0px 10px;
+	height: 50px;
+}
+
+select
+{ 
+	outline:0; 
+	background-color:#fff;
+	padding: 10px 10px 10px 10px;
+	border-radius: 25px;
+	border: 1px solid rgba(0,0,0,0.5);
+	width: 250px;
 }
 
 .button
@@ -126,8 +146,3 @@ input[type="checkbox"]{
 	background: white;
 	color: #212121;
 }
-
-
-
-
-
