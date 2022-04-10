@@ -168,7 +168,7 @@ select
 	background-color:#fff;
 	overflow-y:scroll; 
 	overflow-x:hidden;
-	height:400px;
+	height:478px;
 	border: 1px solid #888;
 }
 /* width */
@@ -195,4 +195,49 @@ select
 ::-webkit-scrollbar-thumb:hover 
 {
   background: #555; 
+}
+
+.infoarea
+{
+	background-color:#fff;
+	height:600px;
+	border: 1px solid #888;
+	margin-top: 125px;
+	padding: 20px;
+}
+
+.infoarea h5
+{
+	font-weight: 500;
+}
+
+.infoarea h6
+{
+	margin-top: 2px;
+}
+
+.infoarea .divider
+{
+	width: 100%;
+}
+
+.infoarea .value
+{
+	text-align: center;
+}
+
+.infoarea p
+{
+	margin-bottom: 5px;
+}
+
+.infoarea .availability
+{
+	text-align: center;
+	margin-top: 40px;
+}
+
+.infoarea button
+{
+	text-align: center;
 }
