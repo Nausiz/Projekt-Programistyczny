@@ -3,6 +3,8 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+from connect import select, insert
+
 logging.basicConfig(
     format='%(asctime)s %(levelname)s:%(message)s',
     level=logging.INFO)
@@ -10,7 +12,8 @@ logging.basicConfig(
 
 class Crawler:
     def __init__(self, urls=[]):
-        self.visited_urls = []
+        l1 = select('select url from crawler')
+        self.visited_urls = [x[0] for x in l1]
         self.urls_to_visit = urls
 
     def download_url(self, url):
@@ -26,6 +29,7 @@ class Crawler:
 
     def add_url_to_visit(self, url):
         if url not in self.visited_urls and url not in self.urls_to_visit:
+            insert(url)
             self.urls_to_visit.append(url)
 
     def crawl(self, url):
@@ -46,4 +50,5 @@ class Crawler:
 
 
 if __name__ == '__main__':
-    Crawler(urls=['https://www.empic.com/']).run()
+    # Crawler(urls=['https://www.whiskybase.com/market/browse/']).run()
+    Crawler(urls=['https://www.empik.com/']).run()
