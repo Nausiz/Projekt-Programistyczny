@@ -3,7 +3,7 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
-from connect import select, insert
+from connect import select, insert, update
 
 logging.basicConfig(
     format='%(asctime)s %(levelname)s:%(message)s',
@@ -12,9 +12,10 @@ logging.basicConfig(
 
 class Crawler:
     def __init__(self, urls=[]):
-        l1 = select('select url from crawler')
+        l1 = select('select url from crawler where visited = True')
+        l2 = select('select url from crawler where visited = False')
         self.visited_urls = [x[0] for x in l1]
-        self.urls_to_visit = urls
+        self.urls_to_visit = urls + l2
 
     def download_url(self, url):
         return requests.get(url).text
@@ -30,6 +31,8 @@ class Crawler:
     def add_url_to_visit(self, url):
         if url not in self.visited_urls and url not in self.urls_to_visit:
             insert(url)
+            if url != None and "ksiazka-p" in url:
+                insert(url, 'ksiazki')
             self.urls_to_visit.append(url)
 
     def crawl(self, url):
@@ -47,6 +50,7 @@ class Crawler:
                 logging.exception(f'Failed to crawl: {url}')
             finally:
                 self.visited_urls.append(url)
+                update(url)
 
 
 if __name__ == '__main__':

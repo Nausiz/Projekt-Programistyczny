@@ -34,12 +34,10 @@ def select(s):
 
         print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(**params)
-
         cur = conn.cursor()
         cur.execute(s)
-
         selection = cur.fetchall()
-        #print(selection)
+        # print(selection)
 
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
@@ -51,19 +49,43 @@ def select(s):
             return selection
 
 
-def insert(s):
+def update(s):
+    sql = """ UPDATE crawler SET visited = True WHERE url = %s"""
+    conn = None
+    updated_rows = 0
+    try:
+        params = config()
+
+        print('Connecting to the PostgreSQL database to update')
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+        cur.execute(""" UPDATE crawler SET visited = True WHERE url = '""" + s + """'""")
+        updated_rows = cur.rowcount
+        conn.commit()
+        cur.close()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+    finally:
+        if conn is not None:
+            conn.close()
+            print('Database connection closed.')
+
+    return updated_rows
+
+
+def insert(s, tabela='crawler', column='url'):
     conn = None
     try:
         params = config()
 
-        print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(**params)
-
         cur = conn.cursor()
-        insert_query = """INSERT INTO crawler (url) VALUES ('""" + s + """')"""
+        insert_query = """INSERT INTO """ + tabela + """ (""" + column + """) VALUES ('""" + s + """')"""
         cur.execute(insert_query)
         conn.commit()
-        print("1 Record inserted successfully")
+        print("Record inserted successfully")
 
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
@@ -71,7 +93,6 @@ def insert(s):
     finally:
         if conn is not None:
             conn.close()
-            print('Database connection closed.')
 
 
 if __name__ == '__main__':
