@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import Select
 
 
 class WhiskyBaseFormsCheck(unittest.TestCase):
-    website = "http://www.python.org"
+    website = "LINK DO STRONY"
 
     def setUp(self):
         self.driver = webdriver.Chrome("E:/Git/Projekt-Programistyczny/testy_selenium/chromedriver.exe")
