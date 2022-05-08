@@ -35,7 +35,7 @@ section{
 }
 
 @media screen and (max-width: 767px) {
-  .whisky 
+  .book 
   {
     height: 50%;
 	width: 50%;
@@ -200,7 +200,7 @@ select
 .infoarea
 {
 	background-color:#fff;
-	height:600px;
+	height:500px;
 	border: 1px solid #888;
 	margin-top: 125px;
 	padding: 20px;
