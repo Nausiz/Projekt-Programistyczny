@@ -50,7 +50,6 @@ def select(s):
 
 
 def update(s):
-    sql = """ UPDATE crawler SET visited = True WHERE url = %s"""
     conn = None
     updated_rows = 0
     try:
