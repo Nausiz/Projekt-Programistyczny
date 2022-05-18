@@ -31,7 +31,7 @@ class Crawler:
     def add_url_to_visit(self, url):
         if url not in self.visited_urls and url not in self.urls_to_visit:
             insert(url)
-            if url != None and "ksiazka-p" in url:
+            if url != None and "-p-" in url:
                 insert(url, 'ksiazki')
             self.urls_to_visit.append(url)
 
@@ -55,4 +55,5 @@ class Crawler:
 
 if __name__ == '__main__':
     # Crawler(urls=['https://www.whiskybase.com/market/browse/']).run()
-    Crawler(urls=['https://www.empik.com/']).run()
+    # Crawler(urls=['https://www.empik.com/']).run()
+    Crawler(urls=['https://www.taniaksiazka.pl/']).run()
