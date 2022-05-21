@@ -1,13 +1,13 @@
 import json
 
+
 class Book:
-    def __init__(self, title, author, price, rating, publisher, cover,  year, series, pages,
+    def __init__(self, title, author, price, publisher, cover, year, series, pages,
                  shop_url,
                  img_url):
         self.title = title
         self.author = author
         self.price = price
-        self.rating = rating
         self.publisher = publisher
         self.cover = cover
         self.year = year
@@ -18,9 +18,8 @@ class Book:
 
     def __str__(self):
         return f'Title: {self.title} \n' \
-               f'Description: {self.author} \n' \
+               f'Author: {self.author} \n' \
                f'Price: {self.price} \n' \
-               f'Rating: {self.rating} \n' \
                f'Publisher: {self.publisher} \n' \
                f'Cover: {self.cover} \n' \
                f'Year of publish: {self.year} \n' \
@@ -28,6 +27,7 @@ class Book:
                f'Pages: {self.pages} \n' \
                f'ShopUrl: {self.shop_url} \n' \
                f'Image: {self.img_url}'
+
     pass
 
     def to_json(self):
