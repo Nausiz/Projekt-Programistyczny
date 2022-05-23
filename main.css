@@ -241,3 +241,15 @@ select
 {
 	text-align: center;
 }
+
+.scrollarea button
+{
+	text-align: left;
+	background-color:#fff;
+	border: none;
+}
+
+.scrollarea button:hover
+{
+	background-color:#f1f1f1;
+}
