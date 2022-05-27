@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<title>Tania Książka Book Scrapper</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/ico" href="static/img/book.ico" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/main.css">
+</head>
+
+<body>
+
+	<header>
+
+		<nav class="navbar navbar-light bg-dark">
+			<span class="navbar-brand my-auto h1 p-4 text-light">Tania Książka Book Scrapper</span>
+		</nav>
+		<div style="background-color: #212121; padding: 20px;"></div>
+
+	</header>
+
+	<main>
+
+		<div class="container p-0 m-0">
+
+			<section class='row' style="background-color: #f1f1f1;">
+
+				<div class="col-7 ml-5">
+
+					<form id="searchForm" action="/books" method="get">
+
+						<div style="margin-bottom: 20px; margin-top: 20px;" class="row ml-3">
+
+							<div class="row col-12 p-0 mb-3" style="text-align: center;">
+
+								<div class="searchProduct">
+
+									<i class="fa fa-search" style="font-size:25px; margin: 12px;"></i>
+
+									<input id="productPlaceholder" name="title_contains" type="text"
+										class="form-control form-control-sm" placeholder="Podaj nazwę produktu"
+										aria-label="product" {% if criteria.title_contains %}
+										value="{{ criteria.title_contains }}" {% endif %}
+										aria-describedby="basic-addon2">
+
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="my-2" style="display: flex;">
+									<label for="min_price" style="margin-top: 11px; width: 50%; margin-left: 5px;">Cena
+										od:</label>
+									<input type="number" placeholder="0.00" min="0" step="0.01" id="min_price"
+										name="min_price" {% if criteria.min_price %} value="{{ criteria.min_price }}" {%
+										endif %}>
+
+									<label for="max_price" style="margin-top: 11px;">do:</label>
+									<input type="number" placeholder="0.00" min="0" step="0.01" id="max_price"
+										name="max_price" {% if criteria.max_price %} value="{{ criteria.max_price }}" {%
+										endif %}>
+
+								</div>
+
+								<div class="mx-3 my-2">
+
+									<label for="sort_by">Sortuj według:</label>
+
+									<select name="sort_by" id="sort_by">
+										<option value="a_to_z" {% if criteria.sort_by=="a_to_z" %}selected{% endif %}>
+											Alfabetycznie A-Z</option>
+										<option value="price_asc" {% if criteria.sort_by=="price_asc" %}selected{% endif
+											%}>Cena rosnąco</option>
+										<option value="price_desc" {% if criteria.sort_by=="price_desc" %}selected{%
+											endif %}>Cena malejąco</option>
+									</select>
+								</div>
+
+								<div class="my-2">
+									<button id="filter" type="submit" class="btn pt-2 pb-2 button">Filtruj</button>
+								</div>
+							</div>
+
+						</div>
+
+					</form>
+
+					<div class="scrollarea">
+						{% for book in books %}
+						<div class="ml-5">
+
+							<article class="mt-4 mb-4 row">
+								<button type="button" class='row col-12' onclick="">
+									<div class="col-2">
+										<img class="w-100" src="{{book.link_img}}"></img>
+									</div>
+
+									<div class="col-7 mt-3">
+										<a style="color: #000" href="{{book.link}}">
+											<h5 style="font-weight: 600;">{{book.data.title}}</h5>
+										</a>
+
+										<p style="font-size:13; font-weight: 400;"><b>Autor: </b>{{book.data.author}}
+										</p>
+									</div>
+
+									<div class="col-3 mt-3">
+										{% if book.available %}
+										<h5>{{ book.data.price | replace(from=".", to=",") }} zł</h5>
+										<p style="color: #12D251">Dostępny</p>
+										{% else %}
+										<h5>-</h5>
+										<p style="color: #E13521">Niedostępny</p>
+										{% endif %}
+									</div>
+								</button>
+
+								<div class="divider mt-4"></div>
+
+							</article>
+
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class='col-4 mx-auto infoarea'>
+
+					<h5>LOREM IPSUM DOLOR SIT AMET</h5>
+
+					<div class="divider my-3"></div>
+
+					<div class='row'>
+
+						<div class="col-3 m-auto">
+							<img class="w-100" src="static/img/example.png"></img>
+						</div>
+
+						<div class="col-5 row m-auto">
+							<div class='col-3 mr-5'>
+								<div class='row'>
+									<p>Cena:</p>
+								</div>
+								<div class='row'>
+									<p>Wydawnictwo:</p>
+								</div>
+							</div>
+
+							<div class='col-2 ml-5'>
+								<div class='row'>
+									<h6 class='value'>84,34zł</h6>
+								</div>
+								<div class='row'>
+									<h6 class='value'>Lorem</h6>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="divider my-3"></div>
+
+					<div class='row mx-auto'>
+						<div class="col-4 m-auto p-auto">
+							<div class='row'>
+								<p>Autor:</p>
+							</div>
+							<div class='row'>
+								<p>Rok wydania:</p>
+							</div>
+							<div class='row'>
+								<p>Liczba stron:</p>
+							</div>
+							<div class='row'>
+								<p>Okładka:</p>
+							</div>
+							<div class='row'>
+								<p>Seria:</p>
+							</div>
+						</div>
+
+						<div class="col-3 m-auto p-auto">
+							<div class='row'>
+								<h6 class='value'>Jan Kowalski</h6>
+							</div>
+							<div class='row'>
+								<h6 class='value'>2021</h6>
+							</div>
+							<div class='row'>
+								<h6 class='value'>245</h6>
+							</div>
+							<div class='row'>
+								<h6 class='value'>Twarda</h6>
+							</div>
+							<div class='row'>
+								<h6 class='value'>Lorem</h6>
+							</div>
+						</div>
+					</div>
+
+					<p class='availability' style="color: #E13521">Niedostępny</p>
+					<!-- 
+					<p class='availability' style="color: #12D251">Dostępny</p>
+					<p class='availability' style="color: #5E5E5E">-</p> 
+					-->
+
+					<div class="mt-4 row">
+						<button href='#' type="button" class="btn pt-2 pb-2 button mx-auto">Przejdź do strony w
+							sklepie</button>
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+	</main>
+
+	<footer class="font-small page-footer">
+
+		<div class="container-fluid text-center text-md-left">
+
+			<!-- Grid row -->
+			<div class="row align-items-center justify-content-around pt-3 ">
+
+				<!-- Grid column -->
+				<div class="col-md-auto mt-5">
+
+					<h4 class="font-weight-bold text-uppercase mt-3 mb-4">Nasz projekt TANIA KSIĄŻKA BOOK SCRAPPER</h4>
+
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Grupa projektowa - Not Found</h5>
+
+				</div>
+				<!-- Grid column -->
+
+
+				<!-- Grid column -->
+				<div class="col-md-2 pb-3 book">
+
+					<img src="static/img/book.png" style="width: 120%; margin-left:-25px;">
+
+				</div>
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+
+		<!-- Copyright -->
+		<div style="font-size: 9px; color: grey;" class="footer-copyright text-center py-3">© 2022 Copyright
+			<a style="color: grey;" href="index.html"> Grupa projektowa - Not Found.</a> All rights reserved.
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<script src="https://unpkg.com/mithril/mithril.js"></script>
+	<script src="static/js/frontend.js"></script>
+	<script src="https://kit.fontawesome.com/e6c92d3f6a.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

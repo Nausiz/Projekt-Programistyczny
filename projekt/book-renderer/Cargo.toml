@@ -1,0 +1,17 @@
+[package]
+name = "book-renderer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1"
+axum = "0.5"
+tokio = { version = "1.0", features = ["full"] }
+include_dir = "0.7"
+mime_guess = "2.0"
+rust_decimal = { version = "1.23" }
+serde = { version = "1", features = ["derive"] }
+sqlx = { version = "0.5", features = [ "runtime-tokio-native-tls" , "postgres", "decimal" ] }
+tera = "1"
