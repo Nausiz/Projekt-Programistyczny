@@ -1,0 +1,12 @@
+E:\Git\Projekt-Programistyczny\target\release\deps\sqlformat-d8a75680ca3860e2.rmeta: C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\lib.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\formatter.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\indentation.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\inline_block.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\params.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\tokenizer.rs
+
+E:\Git\Projekt-Programistyczny\target\release\deps\libsqlformat-d8a75680ca3860e2.rlib: C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\lib.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\formatter.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\indentation.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\inline_block.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\params.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\tokenizer.rs
+
+E:\Git\Projekt-Programistyczny\target\release\deps\sqlformat-d8a75680ca3860e2.d: C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\lib.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\formatter.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\indentation.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\inline_block.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\params.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\tokenizer.rs
+
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\lib.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\formatter.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\indentation.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\inline_block.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\params.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\sqlformat-0.1.8\src\tokenizer.rs:
