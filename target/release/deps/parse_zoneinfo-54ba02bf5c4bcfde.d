@@ -1,0 +1,11 @@
+E:\Git\Projekt-Programistyczny\target\release\deps\parse_zoneinfo-54ba02bf5c4bcfde.rmeta: C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\lib.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\line.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\structure.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\table.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\transitions.rs
+
+E:\Git\Projekt-Programistyczny\target\release\deps\libparse_zoneinfo-54ba02bf5c4bcfde.rlib: C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\lib.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\line.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\structure.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\table.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\transitions.rs
+
+E:\Git\Projekt-Programistyczny\target\release\deps\parse_zoneinfo-54ba02bf5c4bcfde.d: C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\lib.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\line.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\structure.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\table.rs C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\transitions.rs
+
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\lib.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\line.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\structure.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\table.rs:
+C:\Users\marty\.cargo\registry\src\github.com-1ecc6299db9ec823\parse-zoneinfo-0.3.0\src\transitions.rs:
