@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=E:\Git\Projekt-Programistyczny\target\release\build\typenum-a5e0639222966d71\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=E:\Git\Projekt-Programistyczny\target\release\build\typenum-a5e0639222966d71\out\op.rs

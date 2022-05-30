@@ -1,1 +1,0 @@
-E:\Git\Projekt-Programistyczny\target\release\book-renderer.exe: E:\Git\Projekt-Programistyczny\src\data\filter.rs E:\Git\Projekt-Programistyczny\src\data.rs E:\Git\Projekt-Programistyczny\src\lib.rs E:\Git\Projekt-Programistyczny\src\main.rs E:\Git\Projekt-Programistyczny\src\routes.rs E:\Git\Projekt-Programistyczny\templates\index.html
