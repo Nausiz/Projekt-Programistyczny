@@ -15,7 +15,7 @@ class Crawler:
         l1 = select('select url from crawler where visited = True')
         l2 = select('select url from crawler where visited = False')
         self.visited_urls = [x[0] for x in l1]
-        self.urls_to_visit = urls + l2
+        self.urls_to_visit = urls + [x[0] for x in l2]
 
     def download_url(self, url):
         return requests.get(url).text
@@ -30,10 +30,11 @@ class Crawler:
 
     def add_url_to_visit(self, url):
         if url not in self.visited_urls and url not in self.urls_to_visit:
-            insert(url)
-            if url != None and "-p-" in url:
-                insert(url, 'ksiazki')
-            self.urls_to_visit.append(url)
+            if url != None and 'https://www.taniaksiazka.pl' in url:
+                insert(url)
+                if url != None and "-p-" in url:
+                    insert(url, 'ksiazki')
+                self.urls_to_visit.append(url)
 
     def crawl(self, url):
         html = self.download_url(url)
